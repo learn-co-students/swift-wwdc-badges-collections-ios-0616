@@ -13,6 +13,8 @@
 		4D1879AA1BF1358E00233542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1879A91BF1358E00233542 /* Assets.xcassets */; };
 		4D1879AD1BF1358E00233542 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1879AB1BF1358E00233542 /* LaunchScreen.storyboard */; };
 		4D1879B81BF1358E00233542 /* swift_wwdc_badges_collectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1879B71BF1358E00233542 /* swift_wwdc_badges_collectionsTests.swift */; };
+		4D1879C41BF1374000233542 /* Sandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1879C31BF1374000233542 /* Sandbox.swift */; };
+		4D1879C61BF1379500233542 /* SandboxSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1879C51BF1379500233542 /* SandboxSpec.swift */; };
 		E91843826BD1754FD4772B97 /* Pods_swift_wwdc_badges_collectionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED37161D34DE2D23661BD165 /* Pods_swift_wwdc_badges_collectionsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		4D1879B31BF1358E00233542 /* swift-wwdc-badges-collectionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-wwdc-badges-collectionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1879B71BF1358E00233542 /* swift_wwdc_badges_collectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_wwdc_badges_collectionsTests.swift; sourceTree = "<group>"; };
 		4D1879B91BF1358E00233542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D1879C31BF1374000233542 /* Sandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandbox.swift; sourceTree = "<group>"; };
+		4D1879C51BF1379500233542 /* SandboxSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandboxSpec.swift; sourceTree = "<group>"; };
 		6E16D2C187D9A6CB4EA578E9 /* Pods-swift-wwdc-badges-collectionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-wwdc-badges-collectionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-wwdc-badges-collectionsTests/Pods-swift-wwdc-badges-collectionsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED37161D34DE2D23661BD165 /* Pods_swift_wwdc_badges_collectionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_wwdc_badges_collectionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,11 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				4D1879A21BF1358E00233542 /* AppDelegate.swift */,
-				4D1879A41BF1358E00233542 /* ViewController.swift */,
-				4D1879A61BF1358E00233542 /* Main.storyboard */,
-				4D1879A91BF1358E00233542 /* Assets.xcassets */,
-				4D1879AB1BF1358E00233542 /* LaunchScreen.storyboard */,
-				4D1879AE1BF1358E00233542 /* Info.plist */,
+				4D1879C31BF1374000233542 /* Sandbox.swift */,
+				4D1879C21BF1372C00233542 /* Resources */,
 			);
 			path = "swift-wwdc-badges-collections";
 			sourceTree = "<group>";
@@ -105,10 +106,23 @@
 		4D1879B61BF1358E00233542 /* swift-wwdc-badges-collectionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				4D1879C51BF1379500233542 /* SandboxSpec.swift */,
 				4D1879B71BF1358E00233542 /* swift_wwdc_badges_collectionsTests.swift */,
 				4D1879B91BF1358E00233542 /* Info.plist */,
 			);
 			path = "swift-wwdc-badges-collectionsTests";
+			sourceTree = "<group>";
+		};
+		4D1879C21BF1372C00233542 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D1879A41BF1358E00233542 /* ViewController.swift */,
+				4D1879A61BF1358E00233542 /* Main.storyboard */,
+				4D1879A91BF1358E00233542 /* Assets.xcassets */,
+				4D1879AB1BF1358E00233542 /* LaunchScreen.storyboard */,
+				4D1879AE1BF1358E00233542 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		9F8F74FFF0592060F1CA2976 /* Pods */ = {
@@ -273,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1879A51BF1358E00233542 /* ViewController.swift in Sources */,
+				4D1879C41BF1374000233542 /* Sandbox.swift in Sources */,
 				4D1879A31BF1358E00233542 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1879C61BF1379500233542 /* SandboxSpec.swift in Sources */,
 				4D1879B81BF1358E00233542 /* swift_wwdc_badges_collectionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
