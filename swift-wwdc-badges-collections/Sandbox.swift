@@ -8,27 +8,7 @@ import Foundation
 
 */
 
-let roomsForSpeakers: [String: Int] = [
-    "Anita Borg": 201,
-    "Alan Kay": 202,
-    "Ada Lovelace": 203,
-    "Aaron Swartz": 215,
-    "Alan Turing": 204,
-    "Michael Faraday": 205,
-    "Grace Hopper": 230,
-]
-
-let capacitiesForRooms: [Int: Int] = [
-    201: 40,
-    202: 50,
-    203: 70,
-    215: 30,
-    204: 20,
-    230: 80,
-    260: 60
-]
-
-
+// I. Badges
 
 func badgeForSpeaker(speaker: String) -> String {
     return "Hello, my name is \(speaker)."
@@ -44,6 +24,18 @@ func badgesForSpeakers(speakers: [String]) -> [String] {
     
     return badges
 }
+
+// II. Room Assignments
+
+let roomsForSpeakers: [String: Int] = [
+    "Anita Borg": 201,
+    "Alan Kay": 202,
+    "Ada Lovelace": 203,
+    "Aaron Swartz": 215,
+    "Alan Turing": 204,
+    "Michael Faraday": 205,
+    "Grace Hopper": 230,
+]
 
 func roomAssignmentsForSpeakers(speakers: [String]) -> [String] {
     var roomAssignments = [String]()
@@ -61,6 +53,18 @@ func roomAssignmentsForSpeakers(speakers: [String]) -> [String] {
     return roomAssignments
 }
 
+// III. Audience Capacities
+
+let capacitiesForRooms: [Int: Int] = [
+    201: 40,
+    202: 50,
+    203: 70,
+    215: 30,
+    204: 20,
+    230: 80,
+    240: 35,
+    260: 60
+]
 
 func getCapacitiesForSpeakers() -> [String: Int] {
     var capacitiesForSpeakers = [String: Int]()
