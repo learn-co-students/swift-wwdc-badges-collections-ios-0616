@@ -103,13 +103,46 @@ class SandboxSpec: QuickSpec {
             describe("getCapacitiesForSpeakers()") {
                 it("should return a dictionary containing the capacities for speakers with valid room assignments") {
                     let result = getCapacitiesForSpeakers()
+                    print(result)
                     
                     expect(result["Anita Borg"]).to(equal(40))
-                    expect(result["Michael Faraday"]).to(equal(20))
+                    expect(result["Alan Turing"]).to(equal(20))
                     expect(result["Alan Kay"]).to(equal(50))
                     expect(result["Aaron Swartz"]).to(equal(30))
-                    expect(result["Aaron Swartz"]).to(equal(30))
-                    expect(result["Aaron Swartz"]).to(equal(30))
+                    expect(result["Grace Hopper"]).to(equal(80))
+                    expect(result["Ada Lovelace"]).to(equal(70))
+                }
+            }
+            
+            describe("audienceSizesForSpeakers(_:)") {
+                it("should return an array with a string describing Anita Borg's audience size") {
+                    let result = audienceSizesForSpeakers(["Anita Borg"])
+                    let expected = ["Anita Borg can speak to up to 40 people."]
+                    
+                    expect(result).to(equal(expected))
+                }
+                
+                it("should return an array with a string saying that Inigo Montoya does not have a room") {
+                    let result = audienceSizesForSpeakers(["Inigo Montoya"])
+                    let expected = ["Room information not found for Inigo Montoya."]
+                    
+                    expect(result).to(equal(expected))
+                }
+                
+                it("should return an array containing strings describing each of the speakers' rooms") {
+                    let result = audienceSizesForSpeakers(speakers)
+                    let expected = [
+                        "Anita Borg can speak to up to 40 people.",
+                        "Alan Kay can speak to up to 50 people.",
+                        "Ada Lovelace can speak to up to 70 people.",
+                        "Aaron Swartz can speak to up to 30 people.",
+                        "Alan Turing can speak to up to 20 people.",
+                        "Room information not found for Michael Faraday.",
+                        "Grace Hopper can speak to up to 80 people.",
+                        "Room information not found for Charles Babbage."
+                    ]
+                    
+                    expect(result).to(equal(expected))
                 }
             }
         }
