@@ -2,9 +2,14 @@
 
 ## Objectives
 
+1. Write functions that accept and return collections.
+2. Use arrays and dictionaries in loops.
+3. Unwrap the optionals returned from accessed a collection.
+4. Combine data held across multiple collections to get a meaningful result.
+
 ## Introduction
 
-You're helping out at Apple's [Worldwide Developers Conference](https://developer.apple.com/wwdc/) this year. Your task is to print various pieces of information regarding each of the eight speakers at the conference.
+You're helping out at Apple's [Worldwide Developers Conference](https://developer.apple.com/wwdc/) this year. Your task is to print various pieces of information regarding each of the eight speakers at the conference. However, you must not assume that the event information that you have been provided is correct or complete. **There are mistakes in the data that you will need to handle with optionals.**
 
 ## Instructions
 
@@ -32,7 +37,7 @@ Aaron Swartz    | 215
 Alan Turing     | 204
 Michael Faraday | 205
 Grace Hopper    | 230  
-**Hint:** *Charles Babbage's name is missing from this list. You'll need to handle this case in your code.*
+**Hint:** *A speaker's name is missing from this list. You'll need to handle this case in your code.*
 
 1. Create a dictionary instance in `Sandbox.swift` to hold this information in your code. The names should be keys and the values should be the room numbers.
 
@@ -41,7 +46,7 @@ Grace Hopper    | 230
 
 3. Use optional unwrapping to handle the case of the speaker who has not been provided with a room assignment. Include a message in the returned array that you can bring to your production manager which reads:  
   `<speaker> has not been assigned to a room.`  
-  *We've got to get Mr. Babbage's room sorted out before show time.*
+  *We've got to get that room assignment sorted out before show time.*
  
 ### III. Audience Capacities
 
@@ -57,7 +62,7 @@ Room | Capacity
 230  | 80 people
 240  | 35 people
 260  | 60 people
-**Hint:** *You may have noticed that Michael Faraday's assigned room does not exist. You will need to handle this case in one of the functions.*
+**Hint:** *You may have noticed that one of the assigned rooms does not actually exist. You will need to handle this case in one of the functions.*
 
 1. Create a dictionary instance in `Sandbox.swift` to hold this information in your code. The rooms should be integer keys and the capacities should be integer values.
 
