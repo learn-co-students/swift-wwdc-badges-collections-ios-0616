@@ -68,7 +68,7 @@ Room | Capacity
 
 2. Write a function named `getRoomCapacitiesForAllSpeakers()` which takes no arguments and returns a dictionary with string keys and integer values. Use the two dictionaries you've created to find the room capacity for each speaker. Save this information in a new dictionary with each speaker's name as the key, and the audience size as the value. Return this dictionary at the end of the method. **Determine this information programmatically, do not manually read between the two tables.**
 
-3. Write another function named `audienceSizesForSpeakers(_:)` which takes one argument, an array of strings, and returns an array of strings. Use the `getCapacitiesForSpeakers(_:)` function that you just wrote to get the audience size information for each speaker. Return an array containing a string message for each speaker that reads:
+3. Write another function named `audienceSizesForSpeakers(_:)` which takes one argument, an array of strings, and returns an array of strings. Use the `getRoomCapacitiesForAllSpeakers()` function that you just wrote to get the audience size information for each speaker. Return an array containing a string message for each speaker that reads:
   `<speaker> can speak to up to <capacity> people.`  
   However, there are two speakers with problematic room assignments: one without a room assignment at all, and one with an invalid room assignment. Rely on optionals to detect these speakers and generate messages for them that you can give to your production manager that read:  
   `Room information not found for <speaker>.`  
