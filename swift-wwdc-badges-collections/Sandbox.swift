@@ -66,7 +66,7 @@ let capacitiesForRooms: [Int: Int] = [
     260: 60
 ]
 
-func getCapacitiesForSpeakers() -> [String: Int] {
+func getRoomCapacitiesForAllSpeakers() -> [String: Int] {
     var capacitiesForSpeakers = [String: Int]()
     
     for (speaker, room) in roomsForSpeakers {
@@ -79,7 +79,7 @@ func getCapacitiesForSpeakers() -> [String: Int] {
 }
 
 func audienceSizesForSpeakers(speakers: [String]) -> [String] {
-    let capacities = getCapacitiesForSpeakers()
+    let capacities = getRoomCapacitiesForAllSpeakers()
     
     var audienceSizes = [String]()
     
