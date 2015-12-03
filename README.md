@@ -66,7 +66,7 @@ Room | Capacity
 
 1. Create a dictionary instance in `Sandbox.swift` to hold this information in your code. The rooms should be integer keys and the capacities should be integer values.
 
-2. Write a function named `getCapacitiesForSpeakers(_:)` which takes one argument, an array of strings, and returns a dictionary with string keys and integer values. Use the two dictionaries you've created to find the audience capacity for each speaker. Save this information in a new dictionary with each speaker's name as the key, and the audience size as the value. Return this dictionary at the end of the method. **Determine this information programmatically, do not manually read between the two tables.**
+2. Write a function named `getRoomCapacitiesForAllSpeakers()` which takes no arguments and returns a dictionary with string keys and integer values. Use the two dictionaries you've created to find the room capacity for each speaker. Save this information in a new dictionary with each speaker's name as the key, and the audience size as the value. Return this dictionary at the end of the method. **Determine this information programmatically, do not manually read between the two tables.**
 
 3. Write another function named `audienceSizesForSpeakers(_:)` which takes one argument, an array of strings, and returns an array of strings. Use the `getCapacitiesForSpeakers(_:)` function that you just wrote to get the audience size information for each speaker. Return an array containing a string message for each speaker that reads:
   `<speaker> can speak to up to <capacity> people.`  

@@ -100,15 +100,15 @@ class SandboxSpec: QuickSpec {
                 }
             }
 
-            describe("getCapacitiesForSpeakers()") {
+            describe("getRoomCapacitiesForAllSpeakers()") {
                 it("should return a dictionary with six entries") {
-                    let result = getCapacitiesForSpeakers()
+                    let result = getRoomCapacitiesForAllSpeakers()
                     
                     expect(result.count).to(equal(6))
                 }
                 
                 it("should return a dictionary containing the capacities for speakers with valid room assignments") {
-                    let result = getCapacitiesForSpeakers()
+                    let result = getRoomCapacitiesForAllSpeakers()
                     
                     expect(result["Anita Borg"]).to(equal(40))
                     expect(result["Alan Turing"]).to(equal(20))
