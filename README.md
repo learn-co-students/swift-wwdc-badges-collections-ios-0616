@@ -73,4 +73,6 @@ Room | Capacity
   However, there are two speakers with problematic room assignments: one without a room assignment at all, and one with an invalid room assignment. Rely on optionals to detect these speakers and generate messages for them that you can give to your production manager that read:  
   `Room information not found for <speaker>.`  
   *Now hurry, the doors open in 15 minutes!*
-<a href='https://learn.co/lessons/swift-wwdc-badges-collections' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+
+<p data-visibility='hidden'><a href='https://learn.co/lessons/swift-wwdc-badges-collections' title='Swift WWDC badges Collections'>Swift WWDC badges Collections</a> on Learn.co and start learning to code for free.</p>
