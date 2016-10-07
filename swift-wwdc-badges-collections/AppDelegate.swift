@@ -7,18 +7,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var sand = SandBox()
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         
-        /**
-
-        * Manually test your functions here!
-
-        */
+        sand.badgeForSpeaker("Anita Borg")
+                
+        sand.badgesForSpeakers(["Anita Borg", "Alan Kay", "Ada Lovelace", "Aaron Swartz", "Alan Turing", "Michael Faraday", "Grace Hopper"])
         
-        // do not alter
-        return true  //
-    }   //////////////
-}       /////////////
+        sand.roomAssignmentsForSpeakers(["Anita Borg", "Alan Kay", "Ada Lovelace", "Aaron Swartz", "Alan Turing", "Michael Faraday", "Grace Hopper"])
+        
+        sand.roomAssignmentsForSpeakers(["Anita Borg", "Alan Kay", "Ada Lovelace", "Aaron Swartz", "Alan Turing", "Michael Faraday", "Grace Hopper"])
+        
+        
+        return true
+    }
+}
 
