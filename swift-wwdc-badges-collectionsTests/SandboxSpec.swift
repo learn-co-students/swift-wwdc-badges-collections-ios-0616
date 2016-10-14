@@ -6,6 +6,9 @@ import Nimble
 
 class SandboxSpec: QuickSpec {
     override func spec() {
+        
+        let sandbox = SandBox()
+        
         describe("Sandbox") {
             
             var speakers = [String]()
@@ -28,31 +31,31 @@ class SandboxSpec: QuickSpec {
                 it("should return a 'hello' message for Anita Borg") {
                     let expected = "Hello, my name is Anita Borg."
                     
-                    expect(badgeForSpeaker("Anita Borg")).to(match(expected))
+                    expect(sandbox.badgeForSpeaker("Anita Borg")).to(match(expected))
                 }
                 
                 it("should return a 'hello' message for Alan Turing") {
                     let expected = "Hello, my name is Alan Turing."
                     
-                    expect(badgeForSpeaker("Alan Turing")).to(match(expected))
+                    expect(sandbox.badgeForSpeaker("Alan Turing")).to(match(expected))
                 }
                 
                 it("should return a 'hello' message for Inigo Montoya") {
                     let expected = "Hello, my name is Inigo Montoya."
                     
-                    expect(badgeForSpeaker("Inigo Montoya")).to(match(expected))
+                    expect(sandbox.badgeForSpeaker("Inigo Montoya")).to(match(expected))
                 }
             }
             
             describe("badgesForSpeakers(_:)") {
                 it("should return an empty array for an empty array") {
-                    expect(badgesForSpeakers([])).to(beEmpty())
+                    expect(sandbox.badgesForSpeakers([])).to(beEmpty())
                 }
                 
                 it("should return an array with a 'hello' message for Inigo Montoya") {
                     let expected = ["Hello, my name is Inigo Montoya."]
                     
-                    expect(badgesForSpeakers(["Inigo Montoya"])).to(equal(expected))
+                    expect(sandbox.badgesForSpeakers(["Inigo Montoya"])).to(equal(expected))
                 }
 
                 it("should return an array of 'hello' messages with each speaker's name") {
@@ -67,18 +70,18 @@ class SandboxSpec: QuickSpec {
                     "Hello, my name is Charles Babbage."
                     ]
                     
-                    expect(badgesForSpeakers(speakers)).to(equal(expected))
+                    expect(sandbox.badgesForSpeakers(speakers)).to(equal(expected))
                 }
             }
 
             describe("roomAssignmentsForSpeakers(_:)") {
                 it("should return an empty array for an empty array") {
-                    expect(roomAssignmentsForSpeakers([])).to(beEmpty())
+                    expect(sandbox.roomAssignmentsForSpeakers([])).to(beEmpty())
                 }
                 
                 it("should return an array with a room assignment for Anita Borg") {
                     let expected = ["Anita Borg will be speaking in Room 201."]
-                    let result = roomAssignmentsForSpeakers(["Anita Borg"])
+                    let result = sandbox.roomAssignmentsForSpeakers(["Anita Borg"])
                     
                     expect(result).to(equal(expected))
                 }
@@ -94,7 +97,7 @@ class SandboxSpec: QuickSpec {
                         "Grace Hopper will be speaking in Room 230.",
                         "Charles Babbage has not been assigned to a room."
                     ]
-                    let result = roomAssignmentsForSpeakers(speakers)
+                    let result = sandbox.roomAssignmentsForSpeakers(speakers)
                     
                     expect(result).to(equal(expected))
                 }
